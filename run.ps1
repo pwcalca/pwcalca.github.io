@@ -1,4 +1,3 @@
-﻿# PowerShell Script to Download a ZIP from Google Drive, Unzip, and Run Pip Install & Test.py
 
 # Optional: Cleanup downloaded and unpacked files
 Remove-Item -Path $localZipPath -Force
