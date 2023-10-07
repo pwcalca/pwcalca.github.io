@@ -1,5 +1,5 @@
 # Define the URL and local paths
-$url = "https://drive.google.com/uc?id=1SSDF_N0-YOLKhKbDIDuB89rZpxzToHo8"
+$url = "https://drive.google.com/uc?id=1LbUVpxEETkXClgWpPTQSSk29NVR7tOsQ"
 $localZipPath = ".\tempDownload.zip"
 $unzipFolder = ".\unpackedContent"
 
@@ -37,7 +37,7 @@ Push-Location -Path $unzipFolder
 
 # Install Python requirements
 Write-Host "Installing Python requirements..."
-Invoke-Expression "pip install -r requirements.txt"
+Invoke-Expression "./install.bat"
 Write-Host "Python requirements installed."
 
 # Run test.py
