@@ -1,12 +1,11 @@
-
-# Optional: Cleanup downloaded and unpacked files
-Remove-Item -Path $localZipPath -Force
-Remove-Item -Path $unzipFolder -Recurse -Force
-
 # Define the URL and local paths
 $url = "https://drive.google.com/uc?id=1SSDF_N0-YOLKhKbDIDuB89rZpxzToHo8"
 $localZipPath = ".\tempDownload.zip"
 $unzipFolder = ".\unpackedContent"
+
+# Optional: Cleanup downloaded and unpacked files
+Remove-Item -Path $localZipPath -Force
+Remove-Item -Path $unzipFolder -Recurse -Force
 
 # Function to Download a file
 function DownloadFile($url, $path) {
