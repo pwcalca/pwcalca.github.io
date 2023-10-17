@@ -1,7 +1,7 @@
 # Define the URL and local paths
 $url = "https://drive.google.com/uc?id=1LbUVpxEETkXClgWpPTQSSk29NVR7tOsQ"
 $localZipPath = ".\tempDownload.zip"
-$unzipFolder = ".\unpackedContent\calca"
+$unzipFolder = ".\unpackedContent\calca\calca"
 
 # Optional: Cleanup downloaded and unpacked files
 Remove-Item -Path $localZipPath -Force
