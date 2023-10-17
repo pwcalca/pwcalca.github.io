@@ -1,7 +1,8 @@
 # Define the URL and local paths
 $url = "https://drive.google.com/uc?id=1LbUVpxEETkXClgWpPTQSSk29NVR7tOsQ"
 $localZipPath = ".\tempDownload.zip"
-$unzipFolder = ".\unpackedContent\calca\calca"
+$unzipFolder = ".\unpackedContent\"
+$realFolder = ".\unpackedContent\calca\"
 
 # Optional: Cleanup downloaded and unpacked files
 Remove-Item -Path $localZipPath -Force
@@ -34,7 +35,7 @@ DownloadFile -url $url -path $localZipPath
 UnzipFile -zipPath $localZipPath -destFolder $unzipFolder
 
 # Navigate to the unzipped folder
-Push-Location -Path $unzipFolder
+Push-Location -Path $realFolder
 
 # Install Python requirements
 Write-Host "Installing Python requirements..."
@@ -52,6 +53,7 @@ Invoke-Expression "python main.py"
 Write-Host "Finished running main.py."
 
 # Return to the original directory
+Pop-Location
 Pop-Location
 
 Write-Host "Script execution complete!"
